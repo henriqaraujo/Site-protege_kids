@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    padding: 0em 8em 0em 2em;
+}
+
+.logo {
+    font: 1.9em 'Sansita Swashed', cursive;
+    color: #F28C26;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 20px;
+    color: #F28C26;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    color: white;
+    float: right;
+    line-height: 55px;
+    font-size: 35px;
+    cursor: pointer;
+    margin-top: 12px;
+    display: none;
+}
+
+@media screen and (max-width: 996px) {
+    header {
+        border-bottom: 2.5px solid #F28C26;
+    }
+    header nav.active {
+        left: 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        background-color: black;
+        top: 80px;
+        left: -100%;
+        transition: all ease-in-out 0.9s;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        border-bottom: 2.5px solid #F28C26;
+        color: #F28C26;
+    }
+}
